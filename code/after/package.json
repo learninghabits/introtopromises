@@ -1,0 +1,17 @@
+{
+  "name": "node-express-api",
+  "version": "1.0.0",
+  "description": "node express rest api",
+  "main": "server.js",
+  "scripts": {
+    "start": "server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26",
+    "mongodb-autoincrement": "^1.0.1"
+  }
+}
