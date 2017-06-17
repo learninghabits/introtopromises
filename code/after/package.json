@@ -13,5 +13,8 @@
     "express": "^4.15.2",
     "mongodb": "^2.2.26",
     "mongodb-autoincrement": "^1.0.1"
+  },
+  "devDependencies": {
+    "es6-promise": "^4.1.0"
   }
 }

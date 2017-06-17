@@ -6,6 +6,7 @@ app.use(bodyparser.json());
 var DataService = function (collectionName) {
 	var MongoClient = require('mongodb').MongoClient;
 	var url = 'mongodb://localhost:27017/topics';
+	var Promise = require('es6-promise'); // not required on windows OS';
 	var dataService = {
 		connect: function () {
 			return new Promise(function (onsuccess, onerror) {

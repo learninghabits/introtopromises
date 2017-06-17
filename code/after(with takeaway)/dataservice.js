@@ -4,6 +4,7 @@ module.exports = function () {
     var config = require('./dbconfig.json');
 	var url = config.url;
     var collectionName = config.collectionName;
+	var Promise = require('es6-promise'); // not required on windows OS';
 	var dataService = {
 		connect: function () {
 			return new Promise(function (onsuccess, onerror) {
