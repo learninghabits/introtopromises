@@ -4,17 +4,17 @@ module.exports = function () {
     var config = require('./dbconfig.json');
 	var url = config.url;
     var collectionName = config.collectionName;
-	var Promise = require('es6-promise'); // not required on windows OS';
+	var Promise = require('es6-promise'); // not required on windows OS');
 	var dataService = {
 		connect: function () {
-			return new Promise(function (onsuccess, onerror) {
-				MongoClient.connect(url, function (error, db) {
+			return new Promise(function (onsuccess, onerror) {				
+				MongoClient.connect(url, function (error, db) {					
 					if (error) {
 						return onerror(error);
 					}
 					return onsuccess(db);
 				});
-			})
+			});
 		},
 		migrateData: function (db) {
 			return new Promise(function (onsuccess, onerror) {
@@ -55,7 +55,7 @@ module.exports = function () {
 				collection.find({}).toArray(function (error, topics) {
 					db.close();
 					if (error) {
-						return onsuccess(error);
+						return onerror(error);
 					}
 					return onsuccess(topics);
 				});
@@ -71,7 +71,7 @@ module.exports = function () {
 				collection.findOne(mainQuery, subQuery, function (error, topic) {
 					db.close();
 					if (error) {
-						return onsuccess(error);
+						return onerror(error);
 					}
 					return onsuccess(topic);
 				});
